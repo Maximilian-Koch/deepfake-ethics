@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detective</title>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header>
+        <h1>The Deepfake Detective</h1>
+        <p class="tagline">The age of post-truth has arrived. What is fake? What is real?<br>Scroll down to review!</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2><strong>Real or AI?</strong> The Line is Blurring.</h2>
+            <p class="intro-text">
+        Deepfakes are synthetic media created using AI technology to manipulate or generate realistic multimedia content.
+        They are often used to replace someone's likeness or voice in existing footage or to create
+        entirely fabricated events.
+        It allows for unseen ways of creativity and accessibility,
+        but also for unseen amounts of misinformation, hatred and fraud.
+        Major <strong>ethical dilemmas</strong> arise with implications for all internet users.</p>
+        </section>
+
+        <section class="conflict-teaser">
+             <h3>The Core Conflict:</h3>
+             <div class="conflict-points">
+                 <div class="point">
+                     <p>Should we value <strong>Free Expression</strong> & <strong>Innovation</strong>, despite the risk of deception?</p>
+                 </div>
+                 <div class="separator">VS</div>
+                 <div class="point">
+                     <p>Should we prioritize <strong>Truth</strong>, <strong>Safety</strong>, & <strong>Personal Dignity</strong>, even if it means limiting technology?</p>
+                 </div>
+             </div>
+        </section>
+
+        <section class="ethical-lens">
+            <h3>Ethical Lenses to Consider:</h3>
+            <div class="frameworks">
+                <div class="framework">
+                    <h4>Preference Utilitarianism</h4>
+                    <p>What fulfills the most personal interests of the affected people?</p>
+                </div>
+                <div class="framework">
+                    <h4>Deontology</h4>
+                    <p>What are our fundamental duties? (e.g., Tell the truth? Protect free speech? Prevent harm?)</p>
+                </div>
+            </div>
+             <p class="note">(Re)consider these perspectives during the game.</p>
+        </section>
+
+        <section class="initial-stance">
+            <h3>Your Initial Thoughts:</h3>
+            <p>Before you begin, how ethical do you generally consider the use of deepfake technology?</p>
+            <div class="slider-section"> <label for="initial-ethics-slider">Overall Stance (1=Very Unethical, 10=Very Ethical):</label>
+                <input type="range" id="initial-ethics-slider" name="initial_ethics_slider" min="1" max="10" value="5" step="1" class="slider-untouched">
+                <span id="initial-slider-value-display">5</span>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <button id="start-game-button" class="cta-button" disabled>Start the test - good luck!</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Deepfake Detective - CSSci - Maximilian Koch | <a href="about.html">About & Sources</a></p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

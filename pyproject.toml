@@ -1,0 +1,26 @@
+# deepfake-ethics/pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta" 
+
+[project]
+name = "deepfake-detective"
+version = "1.0"
+description = "A Flask web application to explore deepfake ethics."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "CC BY-NC-ND"}
+authors = [
+  { name = "Maximilian J. W. Koch", email = "maximilian.koch@student.uva.nl" },
+]
+
+dependencies = [
+  "Flask",
+  "Flask-Cors",
+  "pandas",  
+]
+
+[project.urls]
+Repository = "https://github.com/Maximilian-Koch/deepfake-detective"
+Website = "https://maxnificent.pythonanywhere.com" #temporary

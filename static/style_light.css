@@ -1,0 +1,737 @@
+/* style_light.css - Light Theme Version */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333; /* Dark text for contrast against light background */
+    position: relative;
+    min-height: 100vh;
+    background-color: #f4f7f6; /* Light fallback color */
+    /* Consider a light/subtle background image or gradient if desired */
+    /* background-image: url('background_light.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background static on scroll */
+    padding-bottom: 60px; /* Footer height */
+}
+
+/* Optional: Light overlay if needed for background image readability, otherwise remove */
+/*
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Light overlay
+    z-index: 1;
+}
+*/
+
+/* Ensure content is above the overlay if used */
+header, main, footer {
+    position: relative;
+    /* z-index: 2; */ /* Only needed if using overlay */
+    padding: 20px;
+    max-width: 900px; /* Limit content width for readability */
+    margin: 0 auto; /* Center content */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #222; /* Darker heading */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Lighter shadow */
+}
+
+header .tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555; /* Darker grey */
+}
+
+main section {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for sections */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #0056b3; /* Accent color (darker blue for heading) */
+    text-align: center;
+}
+.hero h2 strong {
+    font-weight: 900;
+}
+
+.hero .intro-text {
+    font-size: 1.1em;
+    text-align: center;
+    color: #444;
+}
+.hero .intro-text strong {
+     color: #007bff; /* Accent color (standard blue) */
+     font-weight: bold;
+}
+
+
+.conflict-teaser h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.conflict-points {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 15px; /* Space between points */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.conflict-points .point {
+    flex-basis: 40%; /* Adjust as needed */
+    background-color: rgba(0, 123, 255, 0.05); /* Very light accent background */
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 200px; /* Ensure points don't get too narrow */
+    border: 1px solid #bce0ff; /* Light accent border */
+}
+.conflict-points .point strong {
+    color: #007bff; /* Accent color */
+    font-weight: bold;
+}
+
+.conflict-points .separator {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff; /* Accent color */
+}
+
+.ethical-lens h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.frameworks {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.framework {
+    flex-basis: 45%; /* Adjust as needed */
+    background-color: #e9ecef; /* Light grey background */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ced4da;
+}
+
+.framework h4 {
+    font-size: 1.2em;
+    color: #0056b3; /* Darker accent color */
+    margin-bottom: 8px;
+}
+
+.ethical-lens .note {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d; /* Medium grey */
+    margin-top: 15px;
+}
+
+
+.call-to-action {
+    text-align: center;
+    background: none; /* Remove background for button section */
+    box-shadow: none;
+    border: none; /* Remove border */
+    padding-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff; /* Accent color */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: none; /* Remove default border */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    color: #6c757d; /* Medium grey */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e9ecef; /* Light grey footer background */
+    border-top: 1px solid #ced4da; /* Subtle top border */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    .hero h2 {
+        font-size: 1.6em;
+    }
+    .conflict-points, .frameworks {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+    .conflict-points .point, .framework {
+        flex-basis: 100%; /* Take full width when stacked */
+    }
+    .conflict-points .separator {
+        margin: 10px 0;
+    }
+}
+
+/* --- Game Page Specific Styles --- */
+
+#game-area {
+    max-width: 1000px;
+}
+
+#case-file {
+    text-align: center;
+    background-color: #fff; /* White background for focus */
+    border: 1px solid #ccc; /* Lighter border */
+}
+
+#case-title {
+    font-size: 1.8em;
+    color: #0056b3; /* Darker accent color */
+    margin-bottom: 20px;
+}
+
+#media-display {
+    margin-bottom: 15px;
+    background-color: #eee; /* Light grey background for media */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* Center the image block */
+    max-width: 100%;
+    border: 1px solid #ddd;
+}
+
+#exhibit-image, .youtube-embed { /* Apply to YouTube iframe too */
+    max-width: 100%;
+    max-height: 400px; /* Limit media height */
+    display: block; /* Remove extra space below */
+    margin: 0 auto; /* Center within display area */
+    border-radius: 3px;
+}
+/* Specific styling for YouTube iframe aspect ratio */
+.youtube-embed {
+    aspect-ratio: 16 / 9; /* Standard video aspect ratio */
+    width: 100%; /* Make it responsive */
+    height: auto; /* Adjust height automatically */
+    max-height: 400px; /* Keep max height constraint */
+}
+
+
+#exhibit-description {
+    font-size: 1.1em;
+    color: #555; /* Dark grey */
+    margin-bottom: 10px;
+}
+
+#analysis-section {
+    text-align: center;
+    background: none; /* No background for button area */
+    box-shadow: none;
+    padding-bottom: 15px;
+    border: none;
+}
+
+#analysis-section h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.guess-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 1px solid #ccc; /* Add subtle border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    min-width: 120px;
+    color: #fff; /* White text on colored buttons */
+}
+
+.guess-button:hover:not(:disabled) {
+     transform: translateY(-2px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.guess-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+#real-button {
+    background-color: #28a745; /* Green for Real */
+    border-color: #218838;
+    color: #fff;
+}
+#real-button:hover:not(:disabled) {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+
+#fake-button {
+    background-color: #dc3545; /* Red for Fake */
+    border-color: #c82333;
+    color: #fff;
+}
+#fake-button:hover:not(:disabled) {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+
+#feedback-panel, #end-game-panel {
+    background-color: #f8f9fa; /* Very light grey */
+    border: 1px solid #dee2e6; /* Standard light border */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#feedback-panel.hidden, #end-game-panel.hidden {
+    display: none; /* Hide feedback initially */
+}
+
+#feedback-verdict {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#feedback-verdict.correct {
+    color: #28a745; /* Green for correct */
+}
+
+#feedback-verdict.incorrect {
+    color: #dc3545; /* Red for incorrect */
+}
+#feedback-verdict.uncertain { /* Style for uncertain verdict */
+    color: #ffc107; /* Yellow/Orange for uncertain */
+}
+
+
+#feedback-explanation {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.ethical-analysis {
+    background-color: rgba(0, 123, 255, 0.08); /* Light accent background */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid #007bff; /* Accent border */
+    text-align: left; /* Align text left within this box */
+}
+
+.ethical-analysis h4 {
+    font-size: 1.2em;
+    color: #0056b3; /* Darker accent color */
+    margin-bottom: 10px;
+}
+
+.ethical-analysis p {
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #333; /* Standard dark text */
+}
+
+/* Style framework names */
+.ethical-analysis strong {
+    color: #111; /* Slightly darker for emphasis */
+    font-weight: bold;
+}
+
+
+.ethical-analysis.hidden {
+    display: none;
+}
+
+#next-button {
+    margin-top: 10px;
+    /* Inherits .cta-button styles */
+}
+
+#next-button:disabled {
+    background-color: #6c757d; /* Grey when disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none; /* Disable hover effect */
+    border-color: #5a6268;
+}
+
+#end-game-panel h2 {
+    color: #0056b3; /* Darker accent color */
+    margin-bottom: 15px;
+}
+#end-game-panel p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #444;
+}
+#end-game-panel a.cta-button { /* Target CTA buttons inside specifically */
+    margin-top: 10px;
+    margin-right: 10px; /* Space if adding more buttons */
+}
+
+/* --- Style Enhancements for Advanced Prototype --- */
+
+/* Uncertain Button */
+.guess-button.uncertain {
+    background-color: #ffc107; /* Yellow/Orange for Uncertain */
+    border-color: #e0a800;
+    color: #212529; /* Dark text for better contrast on yellow */
+}
+.guess-button.uncertain:hover:not(:disabled) {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+/* Reasoning Box Mockup Styling */
+.reasoning-area-visual {
+    font-family: monospace;
+    color: #6c757d; /* Medium grey */
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light border */
+    background-color: #e9ecef; /* Light grey */
+    border-radius: 3px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Note for prototype elements */
+.prototype-note {
+    font-size: 0.85em;
+    font-style: italic;
+    color: #6c757d; /* Medium grey */
+    margin-top: 5px;
+}
+
+/* Feedback panel acknowledgment of confidence */
+#confidence-feedback {
+     margin-bottom: 10px;
+     padding-bottom: 10px;
+     border-bottom: 1px solid #dee2e6; /* Light border */
+}
+
+
+/* Context Box Styling */
+.context-box {
+    background-color: #e2f3ff; /* Light blue background */
+    border-left: 3px solid #007bff; /* Blue accent for context */
+    padding: 10px;
+    margin: -10px auto 15px auto; /* Adjust positioning */
+    max-width: 80%;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 0.95em;
+    color: #333; /* Dark text */
+}
+.context-box strong {
+    color: #0056b3; /* Darker blue */
+}
+.context-box.hidden {
+    display: none;
+}
+
+/* Slider Section Styling */
+.slider-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e9ecef; /* Light grey */
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ced4da;
+}
+
+.slider-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Dark text color */
+}
+
+.slider-section input[type="range"] {
+    width: 80%;
+    cursor: pointer;
+}
+
+ .slider-section input[type="range"]:disabled {
+     cursor: not-allowed;
+     opacity: 0.5;
+ }
+
+.slider-section span {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #007bff; /* Accent color */
+    min-width: 20px;
+}
+
+
+/* About Page Specific Styles */
+#about-content section {
+    text-align: left;
+    margin-bottom: 35px;
+}
+#about-content h2 {
+    font-size: 1.8em;
+    color: #0056b3; /* Darker accent color */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc; /* Lighter border */
+    padding-bottom: 5px;
+}
+#about-content h3 {
+    font-size: 1.4em;
+    color: #333; /* Dark text */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#about-content ul {
+    list-style: disc;
+    margin-left: 25px;
+    color: #444; /* Slightly lighter text for list items */
+}
+#about-content li {
+    margin-bottom: 10px;
+}
+#about-content strong {
+    font-weight: bold;
+    color: #000; /* Black for strong emphasis */
+}
+#about-content .call-to-action {
+    margin-top: 30px;
+    text-align: center;
+}
+#about-content .call-to-action a {
+     margin: 0 10px;
+}
+
+/* Footer link styling */
+footer a {
+    color: #0056b3; /* Darker accent color for links */
+    text-decoration: none;
+}
+footer a:hover {
+    color: #007bff; /* Standard accent color on hover */
+    text-decoration: underline;
+}
+
+/* Error styling */
+.error-note {
+    color: #dc3545; /* Red for errors */
+    font-weight: bold;
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c6cb; /* Red border */
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* --- Slider Section Styling --- */
+.slider-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    /* Keep your existing background/border styles for the section */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.slider-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    /* Keep your theme's text color */
+}
+
+/* General Slider Setup - Remove default appearances */
+.slider-section input[type="range"] {
+    width: 80%;
+    cursor: pointer;
+    appearance: none; /* Remove default appearance */
+    -webkit-appearance: none; /* For Safari/Chrome */
+    background: transparent; /* Ensure no background color leaks */
+    height: 16px; /* Define a height container for track/thumb */
+    outline: none;
+}
+.slider-section input[type="range"]:disabled {
+     cursor: not-allowed;
+     opacity: 0.5;
+ }
+
+/* Number Display Styling (Hide when untouched) */
+.slider-section input[type="range"].slider-untouched + span {
+    visibility: hidden;
+}
+.slider-section input[type="range"]:not(.slider-untouched) + span {
+    visibility: visible; /* Ensure visible when class is removed */
+    display: inline-block; /* Ensure it takes space */
+    margin-left: 10px;
+    font-weight: bold;
+    /* Keep your theme's accent color for the number */
+    min-width: 20px;
+}
+
+/* --- UNTOUCHED State Styling --- */
+
+/* Webkit Track (Untouched) */
+.slider-section input[type="range"].slider-untouched::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #ccc !important; /* Force neutral background, adjust color */
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Webkit Thumb (Untouched - Hide) */
+.slider-section input[type="range"].slider-untouched::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    visibility: hidden; /* Try visibility hidden */
+    /* Fallback if visibility fails: */
+    /* height: 0; */
+    /* width: 0; */
+    /* background: transparent; */
+    /* border: none; */
+}
+
+/* Firefox Track (Untouched) */
+.slider-section input[type="range"].slider-untouched::-moz-range-track {
+    height: 8px;
+    background: #ccc !important; /* Force neutral background, adjust color */
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Firefox Thumb (Untouched - Hide) */
+.slider-section input[type="range"].slider-untouched::-moz-range-thumb {
+    visibility: hidden; /* Try visibility hidden */
+     /* Fallback if visibility fails: */
+    /* height: 0; */
+    /* width: 0; */
+    /* background: transparent; */
+    /* border: none; */
+}
+/* Firefox Progress Fill (Untouched - Hide) */
+.slider-section input[type="range"].slider-untouched::-moz-range-progress {
+    background-color: transparent !important; /* Force hide fill */
+}
+
+
+/* --- INTERACTED State Styling (:not(.slider-untouched)) --- */
+/* Define the desired "nice/rounder" look here */
+
+/* Webkit Track (Interacted) */
+.slider-section input[type="range"]:not(.slider-untouched)::-webkit-slider-runnable-track {
+    height: 8px;
+    /* Use gradient for fill, controlled by JS variable */
+    background: linear-gradient(to right,
+        var(--fill-color, #007bff) 0%, /* Use CSS variable for fill color */
+        var(--fill-color, #007bff) var(--value-percent, 50%),
+        var(--track-color, #ccc) var(--value-percent, 50%), /* Use CSS variable for track color */
+        var(--track-color, #ccc) 100%);
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Webkit Thumb (Interacted) */
+.slider-section input[type="range"]:not(.slider-untouched)::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    visibility: visible; /* Ensure visible */
+    margin-top: -4px; /* Vertically center: (track_height - thumb_height) / 2 */
+    background: var(--thumb-color, #007bff); /* Use CSS variable for thumb color */
+    height: 16px;
+    width: 16px;
+    border-radius: 50%; /* Round */
+    cursor: pointer;
+}
+
+/* Firefox Track (Interacted) */
+.slider-section input[type="range"]:not(.slider-untouched)::-moz-range-track {
+    height: 8px;
+    background: var(--track-color, #ccc); /* Use CSS variable */
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Firefox Thumb (Interacted) */
+.slider-section input[type="range"]:not(.slider-untouched)::-moz-range-thumb {
+    visibility: visible; /* Ensure visible */
+    background: var(--thumb-color, #007bff); /* Use CSS variable */
+    height: 16px;
+    width: 16px;
+    border-radius: 50%; /* Round */
+    border: none;
+    cursor: pointer;
+}
+/* Firefox Progress Fill (Interacted) */
+.slider-section input[type="range"]:not(.slider-untouched)::-moz-range-progress {
+    background-color: var(--fill-color, #007bff); /* Use CSS variable */
+    height: 8px;
+    border-radius: 4px;
+}
