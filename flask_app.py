@@ -2,6 +2,11 @@ import sqlite3
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
+import subprocess, hmac, hashlib, os
+
+GITHUB_SECRET = os.environ.get('GITHUB_WEBHOOK_SECRET')
+DEPLOY_SCRIPT_PATH = "/home/maxnificent/mysite/deepfake-ethics/deploy.sh"
+
 app = Flask('Deepfake Detective')
 CORS(app)
 DATABASE = 'scores.db'
@@ -139,6 +144,37 @@ def get_stats(exhibit_id):
     finally:
         db.close()
 
+#verify webhook signature
+def is_valid_signature(x_hub_signature, data, private_key):
+    hash_algorithm, signature = x_hub_signature.split("=", 1)
+    algorithm = getattr(hashlib, hash_algorithm)
+    expected_signature = hmac.new(private_key.encode(), data, algorithm).hexdigest()
+    return hmac.compare_digest(signature, expected_signature)
 
-if __name__ == '__main__':
-    app.run(port=5000)
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    x_hub_signature = request.headers.get('X-Hub-Signature')
+    if GITHUB_SECRET:
+        if x_hub_signature is None:
+            print("Missing X-Hub-Signature header")
+            return 'Error: Missing X-Hub-Signature header', 400
+        if not is_valid_signature(x_hub_signature, request.data, GITHUB_SECRET):
+            print("Invalid X-Hub-Signature")
+            return 'Error: Invalid X-Hub-Signature', 400
+
+    if request.headers.get('X-GitHub-Event') == 'push':
+        print('Push event received from GitHub')
+        try:
+            # Execute the deployment script
+            subprocess.Popen(['bash', DEPLOY_SCRIPT_PATH])
+            print('Deployment script executed')
+            return 'Success: Deployment script executed', 200
+        except Exception as e:
+            print(f'Error executing deployment script: {e}')
+            return f'Error: {e}', 500
+    else:
+        print(f"Received event: {request.headers.get('X-GitHub-Event')}")
+        return 'Not a push event', 200
+
+        
+#use app.run() if run locally
