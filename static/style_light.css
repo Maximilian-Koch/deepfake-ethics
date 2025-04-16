@@ -22,19 +22,6 @@ body {
     padding-bottom: 60px; /* Footer height */
 }
 
-/* Optional: Light overlay if needed for background image readability, otherwise remove */
-/*
-.background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.6); /* Light overlay
-    z-index: 1;
-}
-*/
-
 /* Ensure content is above the overlay if used */
 header, main, footer {
     position: relative;
@@ -671,21 +658,13 @@ footer a:hover {
 }
 /* Firefox Thumb (Untouched - Hide) */
 .slider-section input[type="range"].slider-untouched::-moz-range-thumb {
-    visibility: hidden; /* Try visibility hidden */
-     /* Fallback if visibility fails: */
-    /* height: 0; */
-    /* width: 0; */
-    /* background: transparent; */
-    /* border: none; */
+    visibility: hidden;
 }
 /* Firefox Progress Fill (Untouched - Hide) */
 .slider-section input[type="range"].slider-untouched::-moz-range-progress {
     background-color: transparent !important; /* Force hide fill */
 }
 
-
-/* --- INTERACTED State Styling (:not(.slider-untouched)) --- */
-/* Define the desired "nice/rounder" look here */
 
 /* Webkit Track (Interacted) */
 .slider-section input[type="range"]:not(.slider-untouched)::-webkit-slider-runnable-track {

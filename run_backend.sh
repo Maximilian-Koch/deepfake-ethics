@@ -2,6 +2,6 @@
 
 echo "Starting Flask backend..."
 
-export FLASK_APP=flask_app.py
+export FLASK_APP=backend.py
 
-python flask_app.py
+python backend.py
