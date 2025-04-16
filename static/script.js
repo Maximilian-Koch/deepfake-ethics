@@ -176,15 +176,16 @@ const gameExhibits = [
         ethical_frameworks: `<strong>Preference Utilitarianism Lens: </strong>Voters, and the general public, tend to prefer true information and to not be deceived.
         The perpetrators responsible for the calls prefer suppressing votes.The robocall campaign goes against the preference of a large amount of people, and only a small amount of people
         is in favor of it.<br><strong>Deontology Lens: </strong>Using a deceptive robocall violates the duty of transparency.The voters are treated as means to end (voter suppression), thus also their political autonomy is not acknowledged.
-        Impersonating Joe Biden without consent goes against his dignity.Appyling Kant's imperative, it is clear that if everyone used deceptive deepfakes for vote suppression,
+        Impersonating Joe Biden without consent goes against his dignity. Appyling Kant's imperative, it is clear that if everyone used deceptive deepfakes for vote suppression,
         it would lead to a complete loss of epistemic security and collapse of a fair political system.`
     },
     {
         id: 2, type: 'youtube', description: "Deepfakes in the Entertainment Industry",
-        placeholder: 'VH4AnOAVS1c',context: "The trailer of the Swedish movie 'Watch The Skies'. No need to watch the entire trailer!", isReal: false,
+        placeholder: 'VH4AnOAVS1c',context: "The trailer of the Swedish movie 'Watch The Skies'. Watching the first 20 seconds is sufficient!", isReal: false,
         feedback_text: `The movie was recorded in Swedish. AI was used for dubbing, not only were deepfake used for the voices,
         but also the facial expressions of the actors have been changed to match the English language.
-        It is the first commercial movie to do so, coming out in May in 2025.`,
+        It is the first commercial movie to do so, coming out in May in 2025.<br>
+        Source: https://youtu.be/VH4AnOAVS1c`,
         ethical_dilemma: "Increased accessibility and opportunities for smaller entertainment industries stand in contrast to artistic visions and the job loss of voice actors.",
         ethical_frameworks: `<strong>Preference Utilitarianism Lens:</strong>
         Large global audiences would benefit from access to more entertainment,
@@ -192,8 +193,9 @@ const gameExhibits = [
         Smaller entertainment industries could increase their impact and bring more perspectives to more publicity.
         <br>
         <strong>Deontology Lens: </strong>The actors need to give full consent to their voice being used.
-        Does the AI manipulation disrespect the artist's work?
-        Is transparency given? Unless transparency, consent and the artistic integrity are given, deontological views would be against this.<br>`
+        The movie needs to be fully transparent about its AI usage, which is only partially the case, as it is not explicitly mentioned in the trailer.
+        The artistic integrity has to be given as well, as AI dubbing might remove authenticity in the view of the artist(s).
+        As long as these duties are fulfilled, deontological views would be in favor.<br>`
     },
     {
         id: 3, type: 'video', description: "Deepfakes in Education",
@@ -201,7 +203,7 @@ const gameExhibits = [
         feedback_text: `While the video itself is NOT a deepfake, this was part of an anti-malaria campaign,
         where David Beckham's voice and facial movements were translated into 9 languages.
         You can see the entire video here: https://youtu.be/QiiSAvKJIHo?feature=shared`,
-        ethical_dilemma: "AI-generated educational/awareness content: Does it make education more equal or is it a job-killer?",
+        ethical_dilemma: "AI-generated/modified educational/awareness content: Does it make education more equal or is it a job-killer?",
         ethical_frameworks: `<strong>Preference Utilitarianism Lens:</strong>
         With this technology, educational/awareness content can become more accessible than
         ever before, as content only has to be created in one language, but would be available
@@ -209,8 +211,10 @@ const gameExhibits = [
         This allows for more equal opportunities on a global scale.
         Thus, a large amount of people would prefer this increased accessibility,
         but it could lead to a loss in diversity of opinions, job loss for teachers and educational content creators.
-        <strong>Deontology Lens:</strong>
-        transparency needs to be given etc.<br>`
+        <br>
+        <strong>Deontology Lens:</strong>Depending on the specific implementation, the duty of not harming might be violated,
+        sicne local education industries could get replaced by AI-translated content. Additionally, transparency is 
+        a significant factors - which was given in this case. <br>`
     },
      {
         id: 4, type: 'tweet', description: "Deepfakes in Politics and Personal Matters",
@@ -218,13 +222,13 @@ const gameExhibits = [
         context: "The Monitors at the U.S. Department of Housing and Urban Development were hacked to display a video of Trump licking Elon Musk’s toes. ", isReal: false,
         feedback_text: `This is in fact a deepfake which emerged January 2024.<br>
         Source:<br>https://www.ndtv.com/world-news/deep-fake-video-of-donald-trump-kissing-elon-musks-toes-plays-at-us-office-7790243`,
-        ethical_dilemma: `This touches up on several larger dilemmas -
-        where does freedom of expression end and dignity begin?<br>
-        are deepfakes of provocative acts ever justifiable?`,
-        ethical_frameworks:`<strong>Deontology Lens:</strong>There is a clear deceptive intent. Even when the deception is uncovered, the displayed people are not respected and can
-        still create political and personal harm.<br><strong>Preference Utilitarianism:</strong>Following this framework, the creators and some parts of the audience would
-        support this deepfake, however there is harm for the people in the video. In a broader societal perspective, this allows for an erosion of trust, a loss of epistemic security.`
-    },
+        ethical_dilemma: `Where does freedom of expression end and dignity begin?<br>
+        Are deepfakes of provocative acts ever justifiable?`,
+        ethical_frameworks:`<strong>Preference Utilitarianism: </strong>Following this framework, the creators and some parts of the audience would
+        support this deepfake, however there is harm for the people in the video. In a broader societal perspective, this allows for an erosion of trust, a loss of epistemic security.
+        <br><strong>Deontology Lens: </strong>There is a clear deceptive intent. Even when the deception is uncovered, the displayed people are not respected and can
+        still create political and personal harm.<br>`
+        },
      {
         id: 5, type: 'audio', description: "Deepfakes in Accessibility",
         placeholder: '/static/media/assistant.mp3', context: "A personal assistant makes a phone call to make an appointment", isReal: false,
@@ -232,10 +236,10 @@ const gameExhibits = [
         demonstration is available here: <br> https://youtu.be/D5VN56jQMWM?feature=shared`,
         ethical_dilemma: `In this demonstration, it was not made clear whether transparency is given to the hairdresser.
         Is it ethical to use AI to make appointments? Is it ethical to not let the other person know?`,
-        ethical_frameworks: `<strong>Deontology Lens: </strong>The duty to transparency is not fulfilled in the example.<br>
-        <strong>Preference Utilitarianism Lens: </strong>For the person that the call is made for, time is saved. For the hairdresser it depends on the individual -
+        ethical_frameworks: `<strong>Preference Utilitarianism Lens: </strong>For the person that the call is made for, time is saved. For the hairdresser it depends on the individual -
         but since any appointment made leads to a higher income for the company, it would be preferred to no appointment scheduled,
         however it might not be preferred over a human making the appointment.<br>
+        <strong>Deontology Lens: </strong>The duty to transparency is not fulfilled in the example.<br>
         <strong>Ethics of Care: </strong>Here, ethics of care apply significantly, as these tools can increase accessibility,
         e.g. for people with social anxiety, speaking difficulties/inabilities or language barriers.<br>
         <strong>Justice as fairness: </strong>Would you act differently if you don't know whether the voice you are speaking to is
