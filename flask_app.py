@@ -176,5 +176,6 @@ def webhook():
         print(f"Received event: {request.headers.get('X-GitHub-Event')}")
         return 'Not a push event', 200
 
-        
-#use app.run() if run locally
+
+if __name__=='__main__':
+    app.run(port=5000)
